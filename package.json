@@ -9,7 +9,8 @@
     "format": "prettier --write .",
     "check": "npm run lint && npm run format",
     "precommit": "npm run check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "keywords": [],
   "author": "",
