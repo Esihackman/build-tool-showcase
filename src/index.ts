@@ -1,5 +1,10 @@
-import './styles.scss';
+import './styles/main.scss';
 
-const heading = document.createElement('h2');
-heading.textContent = 'This is TypeScript in action!';
-document.body.appendChild(heading);
+const toggleTheme = () => {
+  document.body.classList.toggle('dark-theme');
+};
+
+const btn = document.createElement('button');
+btn.textContent = 'Toggle Theme';
+btn.onclick = toggleTheme;
+document.body.appendChild(btn);

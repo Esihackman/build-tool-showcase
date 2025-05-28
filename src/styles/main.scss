@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+header,
+footer {
+  @include flex-center;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
