@@ -78,7 +78,7 @@ main {
 }
 
 .dark-mode {
-  background-color: $dark-bg; // Make sure $dark-bg is defined in _variables.scss
+  background-color: $dark-bg; 
   color: white;
 
   header,
