@@ -1,10 +1,34 @@
+@use "sass:color"; // Add this to access color.adjust()
 @use './variables' as *;
 @use './mixins' as *;
 @use './base' as *;
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $primary-color;
+  color: white;
 
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
 
-header,
+  button#theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 footer {
   @include flex-center;
   padding: 1rem;
@@ -20,7 +44,6 @@ main {
   max-width: 1200px;
   margin: auto;
 }
-
 
 .tool-card {
   background: $card-bg;
@@ -54,3 +77,21 @@ main {
   }
 }
 
+.dark-mode {
+  background-color: $dark-bg; // Make sure $dark-bg is defined in _variables.scss
+  color: white;
+
+  header,
+  footer {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+  }
+
+  .tool-card {
+    background: color.adjust($card-bg, $lightness: -10%);
+    color: white;
+
+    h2 {
+      color: color.adjust($primary-color, $lightness: 20%);
+    }
+  }
+}
