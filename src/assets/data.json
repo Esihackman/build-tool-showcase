@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Webpack",
+    "description": "Webpack is a versatile and powerful build tool used to bundle JavaScript and other assets for web development. It efficiently manages dependencies and offers advanced features like lazy loading and hot module replacement. ",
+    "image": "webpack-logo.png",
+    "link": "https://webpack.js.org/"
+  },
+  {
+    "name": "Vite",
+    "description": "Vite is a modern build tool that takes advantage of native ES modules for faster development. It features instant server start, lightning-fast hot module replacement, and a highly optimized build process. ",
+    "image": "vite.svg",
+    "link": "https://vitejs.dev/"
+  },
+  {
+    "name": "Parcel",
+    "description": "Parcel is a zero-configuration build tool that offers simplicity and speed for web development. It automatically handles bundling, minification, and code splitting with no need for complex setup. ",
+    "image": "parcel.png",
+    "link": "https://parceljs.org/"
+  },
+  {
+    "name": "Rollup",
+    "description": "Rollup is a module bundler optimized for JavaScript libraries. It uses tree shaking to eliminate unused code, resulting in smaller and more efficient bundles. ",
+    "image": "rollup.svg",
+    "link": "https://rollupjs.org/"
+  },
+  {
+    "name": "Gulp",
+    "description": "Gulp is a task runner that automates common development tasks like minification, compilation, and image optimization. It uses Node.js streams to speed up the build process and is known for its flexibility. ",
+    "image": "gulp.svg",
+    "link": "https://gulpjs.com/"
+  },
+  {
+    "name": "Grunt",
+    "description": "Grunt is a task runner that helps automate repetitive tasks such as minification, compilation, and testing. It uses a configuration-based setup and has a large ecosystem of plugins for various tasks.",
+    "image": "grunt.svg",
+    "link": "https://gruntjs.com/"
+  }
+]

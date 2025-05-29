@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $light-bg;
+  color: $text-color;
+}
+
+.dark-theme {
+  background-color: $dark-bg;
+  color: white;
+}

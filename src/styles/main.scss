@@ -1,0 +1,97 @@
+@use "sass:color"; 
+@use './variables' as *;
+@use './mixins' as *;
+@use './base' as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $primary-color;
+  color: white;
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  button#theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+footer {
+  @include flex-center;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: white;
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tool-card {
+  background: $card-bg;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #f0f0f0;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 0 1rem 1rem;
+    line-height: 1.4;
+  }
+}
+
+.dark-mode {
+  background-color: $dark-bg; 
+  color: white;
+
+  header,
+  footer {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+  }
+
+  .tool-card {
+    background: color.adjust($card-bg, $lightness: -10%);
+    color: white;
+
+    h2 {
+      color: color.adjust($primary-color, $lightness: 20%);
+    }
+  }
+}
