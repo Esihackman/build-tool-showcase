@@ -1,40 +1,28 @@
 import tools from './assets/data.json';
-import './styles/main.scss';
+import "./styles/main.scss";
+import { renderList } from './utils';
 
-interface Tool {
-  name: string;
-  description: string;
-  image: string;
+
+
+renderList(tools);
+const buttonImage: HTMLImageElement = document.querySelector("button img")!;
+
+export function toggleTheme() {
+document.body.classList.toggle("dark-mode");
+
+  buttonImage.src =
+    document.body.classList.contains("dark-mode") ?
+      "https://img.icons8.com/external-linear-outline-icons-papa-vector/78/external-Light-Mode-interface-linear-outline-icons-papa-vector.png"
+    : "https://img.icons8.com/sf-ultralight-filled/25/moon-symbol.png";
+
+  buttonImage.width = 30;
+  buttonImage.height = 30;
 }
+buttonImage.addEventListener("click", toggleTheme);
 
-const main = document.querySelector('main') as HTMLElement;
 
-export const toggleTheme = ()=>{
-  document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
 
-tools.forEach((tool: Tool) => {
-  const card = document.createElement('div');
-  card.className = 'tool-card';
 
-  card.innerHTML = `
-    <img src="assets/images/${tool.image}" alt="${tool.name} logo" />
-    <h2>${tool.name}</h2>
-    <p>${tool.description}</p>
-  `;
 
-  main.appendChild(card);
-});
 
-const toggleBtn = document.getElementById('theme-toggle');
 
-toggleBtn?.addEventListener('click', toggleTheme);
-
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
-});

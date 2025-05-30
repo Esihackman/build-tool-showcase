@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "types": ["node"]
+    "types": ["node", "jest"],
   },
   "include": ["src"]
 }
