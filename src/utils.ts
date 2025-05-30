@@ -4,19 +4,10 @@ interface Tool {
   image: string;
 }
 
-const main = document.querySelector('main') as HTMLElement; 
-
-
-interface Tool {
-  name: string;
-  description: string;
-  image: string;
-}
-
 export const renderList = (tools: Tool[]): void => {
   const main = document.querySelector('main');
   if (!main) {
-    console.error('No <main> element found in the document.');
+    //console.error('No <main> element found in the document.');
     return;
   }
 
@@ -33,4 +24,3 @@ export const renderList = (tools: Tool[]): void => {
     main.appendChild(card);
   });
 };
-
